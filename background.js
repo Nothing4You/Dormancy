@@ -170,13 +170,13 @@
     // add a context menu to tab-strip to put tabs to sleep manually
     addMenu();
 
-    // Reset timer if timeout value changed
-    if (!timerId || (oldConfig.timeout.value && (config.timeout.value != oldConfig.timeout.value))) {
+    // Reset timer if check interval value changed
+    if (!timerId || (Number.isInteger(oldConfig.checkInterval.value) && (config.checkInterval.value != oldConfig.checkInterval.value))) {
       if (timerId) {
         clearInterval(timerId);
       }
-      let timeoutInMS = config.timeout.value * 60 * 1000;
-      timerId = setInterval(periodicTabCheck, timeoutInMS);
+      let checkIntervalInMS = config.checkInterval.value * 60 * 1000;
+      timerId = setInterval(periodicTabCheck, checkIntervalInMS);
     }
   }
 

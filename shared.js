@@ -5,6 +5,7 @@ const STORAGE_KEY = 'dormancy.configuration';
 // Default values for options
 const defaults = {
   timeout: 10,
+  checkInterval: 10,
   activeWindow: false,
   excludedWebsites: []
 };
@@ -13,6 +14,10 @@ let defaultConfig = {
   timeout: {
     label: browser.i18n.getMessage('optionTimeout'),
     value: defaults.timeout
+  },
+  checkInterval: {
+    label: browser.i18n.getMessage('optionCheckInterval'),
+    value: defaults.checkInterval
   },
   activeWindow: {
     label: browser.i18n.getMessage('optionActiveWindow'),

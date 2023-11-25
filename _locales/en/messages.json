@@ -11,6 +11,10 @@
     "message": "Timeout in minutes",
     "description": "Label for option for how many minutes to wait before putting tabs to sleep."
   },
+  "optionCheckInterval": {
+    "message": "Check interval in minutes",
+    "description": "Label for option for the interval between checks about which tabs to put to sleep."
+  },
   "optionActiveWindow": {
     "message": "Keep active window alive",
     "description": "Label for option for whether to put tabs to sleep in the active window."
